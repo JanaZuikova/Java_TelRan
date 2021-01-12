@@ -19,7 +19,19 @@ public class Homework26 {
 
     }
 
-    private static boolean bobThere(String str) {
+    private static boolean bobThere(String word) {
+
+       int count = 0;
+        for (int i = 0; i < word.length() - 2; i++) {
+            if ('b' == word.charAt(i) && 'b' == word.charAt(i + 2)) {
+                count++;
+            }
+        }
+        return count > 0;
+    }
+
+
+    private static boolean bobThere2(String str) {
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == 'b' && str.charAt(i + 2) == 'b') {
                 return true;
